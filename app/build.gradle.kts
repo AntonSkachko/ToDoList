@@ -1,0 +1,63 @@
+plugins {
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+    id("androidx.navigation.safeargs.kotlin")
+    id("com.google.devtools.ksp") version "1.9.0-1.0.13"
+}
+
+android {
+    namespace = "com.anton.todolist"
+    compileSdk = 33
+
+    defaultConfig {
+        applicationId = "com.anton.todolist"
+        minSdk = 24
+        targetSdk = 33
+        versionCode = 1
+        versionName = "1.0"
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            isMinifyEnabled = false
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
+dependencies {
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation("androidx.core:core-ktx:1.10.1")
+
+    implementation("androidx.fragment:fragment-ktx:1.6.1")
+
+    implementation("androidx.legacy:legacy-support-v4:1.0.0")
+
+    implementation("androidx.lifecycle:lifecycle-livedata-core-ktx:${rootProject.extra["arch_lifecycle_version"]}")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:${rootProject.extra["arch_lifecycle_version"]}")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:${rootProject.extra["arch_lifecycle_version"]}")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:${rootProject.extra["arch_lifecycle_version"]}")
+    implementation("androidx.navigation:navigation-fragment-ktx:${rootProject.extra["nav_version"]}")
+    implementation("androidx.navigation:navigation-ui-ktx:${rootProject.extra["nav_version"]}")
+    implementation("androidx.room:room-ktx:${rootProject.extra["room_version"]}")
+    implementation("androidx.room:room-runtime:${rootProject.extra["room_version"]}")
+    implementation("com.google.android.material:material:1.9.0")
+    implementation("androidx.test:monitor:1.6.1")
+    ksp("androidx.room:room-compiler:${rootProject.extra["room_version"]}")
+}

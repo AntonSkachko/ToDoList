@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">To Do List</string>
+
+    <string name="new_task">Новая задача</string>
+    <string name="name_task">Имя задачи</string>
+    <string name="description_task">Описание задачи</string>
+    <string name="time">Время создания задачи</string>
+    <string name="date">Дата уведомления</string>
+    <string name="category_task">Категория задачи</string>
+
+    <string name="add">Добавить</string>
+    <string name="save">Сохранить</string>
+    <string name="cancel">Отменить</string>
+    <string name="delete">Удалить</string>
+</resources>
