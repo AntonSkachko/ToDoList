@@ -107,51 +107,65 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline_left_indent"
         app:layout_constraintStart_toStartOf="@+id/guideline_left" />
 
-    <!-- дата -->
-<!--    <EditText-->
-<!--        android:id="@+id/date"-->
-<!--        android:layout_width="0dp"-->
+<!--    <com.google.android.material.button.MaterialButton-->
+<!--        android:id="@+id/set_time"-->
+<!--        android:layout_width="wrap_content"-->
 <!--        android:layout_height="wrap_content"-->
 <!--        android:layout_marginTop="8dp"-->
 <!--        android:ems="10"-->
 <!--        android:importantForAutofill="no"-->
-<!--        android:inputType="textPersonName"-->
+<!--        android:text="@string/set_time"-->
 <!--        app:layout_constraintEnd_toStartOf="@+id/guideline_right"-->
 <!--        app:layout_constraintStart_toStartOf="@+id/guideline_left_indent"-->
 <!--        app:layout_constraintTop_toBottomOf="@+id/description" />-->
-    <!--    &lt;!&ndash;  Категория  &ndash;&gt;-->
-    <!--    <EditText-->
-    <!--        android:id="@+id/category"-->
-    <!--        android:layout_width="0dp"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginTop="8dp"-->
-    <!--        android:ems="10"-->
-    <!--        android:importantForAutofill="no"-->
-    <!--        android:inputType="textPersonName"-->
-    <!--        app:layout_constraintEnd_toStartOf="@+id/guideline_right"-->
-    <!--        app:layout_constraintStart_toStartOf="@+id/guideline_left_indent"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/description" />-->
 
-    <!--    <TextView-->
-    <!--        android:layout_width="0dp"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:labelFor="@id/name"-->
-    <!--        android:text="@string/category_task"-->
-    <!--        app:layout_constraintBaseline_toBaselineOf="@+id/category"-->
-    <!--        app:layout_constraintEnd_toStartOf="@+id/guideline_left_indent"-->
-    <!--        app:layout_constraintStart_toStartOf="@+id/guideline_left" />-->
+    <ImageButton
+        android:id="@+id/set_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="?attr/colorSurface"
+        android:contentDescription="@string/set_time"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_middle"
+        app:layout_constraintTop_toBottomOf="@+id/description"
+        app:srcCompat="@drawable/baseline_more_time_24" />
 
+<!--    <com.google.android.material.button.MaterialButton-->
+<!--        android:id="@+id/set_date"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:ems="10"-->
+<!--        android:importantForAutofill="no"-->
+<!--        android:text="@string/set_date"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/guideline_right"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/set_time"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/description" />-->
+
+
+    <ImageButton
+        android:id="@+id/set_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="?attr/colorSurface"
+        android:contentDescription="@string/set_time"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintStart_toEndOf="@+id/set_time"
+        app:layout_constraintTop_toBottomOf="@+id/description"
+        app:srcCompat="@drawable/baseline_edit_calendar_24" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/saveButton"
-        style="@style/Widget.Material3.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:enabled="false"
         android:text="@string/save"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline_middle"
-        app:layout_constraintTop_toBottomOf="@+id/description" />
+        app:layout_constraintTop_toBottomOf="@+id/set_time" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/cancelButton"

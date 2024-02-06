@@ -20,5 +20,19 @@
             android:name="id"
             app:argType="long"
             android:defaultValue="0L" />
+        <action
+            android:id="@+id/action_entryDialogFragment_to_timePickerFragment"
+            app:destination="@id/timePickerFragment" />
+        <action
+            android:id="@+id/action_entryDialogFragment_to_datePickerFragment"
+            app:destination="@id/datePickerFragment" />
     </dialog>
+    <dialog
+        android:id="@+id/timePickerFragment"
+        android:name="com.anton.todolist.TimePickerFragment"
+        android:label="fragment_time_entry" />
+    <dialog
+        android:id="@+id/datePickerFragment"
+        android:name="com.anton.todolist.DatePickerFragment"
+        android:label="fragment_date_entry" />
 </navigation>

@@ -3,6 +3,7 @@
 
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -31,19 +32,50 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="24dp"/>
+        app:layout_constraintGuide_end="24dp" />
 
     <TextView
-
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_marginStart="8dp"
         android:text="@string/name_task"
         android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/guideline_image_horizontal"
         app:layout_constraintStart_toStartOf="@+id/guideline_image_vertical" />
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/time"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="8dp"-->
+    <!--        android:textSize="13dp"-->
+    <!--        android:layout_marginBottom="8dp"-->
+    <!--        android:text="@string/time"-->
+    <!--        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"-->
+    <!--        app:layout_constraintStart_toStartOf="@id/guideline_image_vertical"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/guideline_image_horizontal"/>-->
+
+    <TextView
+        android:id="@+id/alarm_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/time_alarm"
+        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+        app:layout_constraintStart_toStartOf="@id/guideline_image_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_image_horizontal" />
+
+    <TextView
+        android:id="@+id/alarm_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/date_alarm"
+        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_image_horizontal"
+        app:layout_constraintStart_toEndOf="@+id/alarm_time" />
 
     <TextView
         android:id="@+id/description"
@@ -54,9 +86,9 @@
         android:layout_marginBottom="10dp"
         android:text="@string/description_task"
         android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
-        app:layout_constraintStart_toStartOf="@+id/guideline_image_vertical"
         app:layout_constraintEnd_toEndOf="@+id/guideline_right"
-        app:layout_constraintTop_toBottomOf="@+id/time" />
+        app:layout_constraintStart_toStartOf="@+id/guideline_image_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/alarm_time" />
 
     <ImageButton
         android:id="@+id/deleteButton"
@@ -71,14 +103,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_delete" />
 
-    <TextView
-        android:id="@+id/time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:textSize="13dp"
-        android:text="@string/time"
-        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
-        app:layout_constraintStart_toStartOf="@id/guideline_image_vertical"
-        app:layout_constraintTop_toBottomOf="@+id/guideline_image_horizontal"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

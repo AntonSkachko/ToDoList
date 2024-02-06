@@ -4,6 +4,7 @@
     <string name="new_task">Новая задача</string>
     <string name="name_task">Имя задачи</string>
     <string name="description_task">Описание задачи</string>
+    <string name="time_task">Время окончания задачи</string>
     <string name="time">Время создания задачи</string>
     <string name="date">Дата уведомления</string>
     <string name="category_task">Категория задачи</string>
@@ -12,4 +13,9 @@
     <string name="save">Сохранить</string>
     <string name="cancel">Отменить</string>
     <string name="delete">Удалить</string>
+    <string name="ok">OK</string>
+    <string name="set_time">Укажите время</string>
+    <string name="set_date">Укажите дату</string>
+    <string name="time_alarm">Время уведомления</string>
+    <string name="date_alarm">Дата уведомления</string>
 </resources>
