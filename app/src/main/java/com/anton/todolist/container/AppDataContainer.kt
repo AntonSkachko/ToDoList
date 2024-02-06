@@ -6,7 +6,7 @@ import com.anton.todolist.data.repository.RoomTaskRepository
 import com.anton.todolist.data.repository.TaskRepository
 
 class AppDataContainer(
-    private val context: Context
+    override val context: Context
 ) : AppContainer {
 
     override val taskRepository: TaskRepository by lazy {

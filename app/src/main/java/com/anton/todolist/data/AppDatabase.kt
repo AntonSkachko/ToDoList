@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.anton.todolist.data.dao.TaskDao
 import com.anton.todolist.data.model.Task
 
-@Database(entities = [Task::class], version = 2)
+@Database(entities = [Task::class], version = 4)
 abstract class AppDatabase: RoomDatabase() {
 
     abstract fun taskDao(): TaskDao
